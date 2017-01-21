@@ -15,6 +15,14 @@ router.get('/api/anna', function (req, res) {
   });
 });
 
+router.get('/var/double/:number', function (req, res) {
+  var data = req.params.number;
+  data *= 2;
+  res.json({
+    double: data 
+  });
+});
+
 app.use('/', router);
 app.listen(port);
 
